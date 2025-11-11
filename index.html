@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards MSB</title>
+  <link rel="stylesheet" href="FlashcardMSB.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1 class="app-title">Flashcards MSB</h1>
+
+    <div class="score-container">
+      <div id="scoreDisplay">Acertos: 0 / Total: 0</div>
+      <div id="faseDisplay" class="fase fase-na">Fase: N/A</div>
+    </div>
+
+    <div class="flashcard-wrapper">
+      <div class="flashcard" id="flashcard">
+        <div class="front">
+          <div class="materia" id="materia">Matéria: ...</div>
+          <div class="assunto" id="assunto">Assunto: ...</div>
+          <div class="afirmacao" id="afirmacao">...</div>
+          <div class="dica" id="dica">...</div>
+        </div>
+        <div class="back">
+          <div class="resposta" id="resposta">...</div>
+          <div class="justificativa" id="justificativa">...</div>
+          <div class="esquema" id="esquema">...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="correctBtn" class="btn btn-correct" disabled>Acertei</button>
+      <button id="incorrectBtn" class="btn btn-incorrect" disabled>Errei</button>
+      <button id="nextBtn" class="btn btn-next" disabled>Próximo Card</button>
+    </div>
+
+    <div class="deck-controls">
+      <button id="openCreatorBtn" class="btn btn-deck">Criar Novo Card</button>
+      <button id="exportBtn" class="btn btn-deck">Exportar Baralho (JSON)</button>
+      <label for="importFile" class="btn btn-deck">Importar Baralho</label>
+      <input type="file" id="importFile" accept=".json" style="display: none;">
+    </div>
+
+    <div id="cardCreator" class="card-creator" style="display:none;">
+      <h3>Criar Novo Flashcard</h3>
+      <input type="text" id="newMateria" placeholder="Matéria" required>
+      <input type="text" id="newAssunto" placeholder="Assunto">
+      <textarea id="newAfirmacao" placeholder="Afirmação (Frente do Card)" required></textarea>
+      <textarea id="newDica" placeholder="Dica (Opcional)"></textarea>
+      <input type="text" id="newResposta" placeholder="Resposta (Verso do Card)" required>
+      <textarea id="newJustificativa" placeholder="Justificativa (Verso do Card)"></textarea>
+      <input type="text" id="newEsquema" placeholder="Esquema/Mnemônico (Opcional)">
+      <button id="addCardBtn" class="btn btn-correct">Adicionar Card</button>
+      <button id="closeCreatorBtn" class="btn btn-incorrect">Cancelar</button>
+    </div>
+
+  </div>
+  <script src="FlashcardMSB.js"></script>
+</body>
+</html>
