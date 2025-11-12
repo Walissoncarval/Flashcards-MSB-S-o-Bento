@@ -35,15 +35,18 @@ body {
   margin-bottom: 20px;
 }
 
+/* 🔧 Ajuste de tamanho e centralização */
 .flashcard {
   width: 100%;
   max-width: 400px; 
-  height: 260px;
+  min-height: 280px; /* altura mínima maior para legibilidade */
   perspective: 1000px;
   cursor: pointer;
   position: relative;
+  margin: 0 auto;
 }
 
+/* 🔧 Estilos internos do card */
 .flashcard .front, .flashcard .back {
   position: absolute;
   width: 100%;
@@ -53,9 +56,14 @@ body {
   transition: transform 0.8s ease;
   box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
   padding: 20px;
-  box-sizing: border-box; 
-  text-align: left;
-  overflow-y: auto; /* Permite scroll se o conteúdo for muito longo */
+  box-sizing: border-box;
+  text-align: center; /* 🔧 Centraliza o conteúdo */
+  overflow: hidden; /* 🔧 Remove barra de rolagem vertical */
+  display: flex; /* 🔧 Centraliza verticalmente o conteúdo */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  word-break: break-word; /* 🔧 Quebra linhas longas automaticamente */
 }
 
 .flashcard .front {
@@ -77,7 +85,7 @@ body {
   transform: rotateY(360deg);
 }
 
-/* Estilos de conteúdo */
+/* --- Estilos de conteúdo --- */
 .materia {
   font-size: 1.1rem;
   font-weight: bold;
@@ -120,11 +128,10 @@ body {
   margin-bottom: 10px;
 }
 
-/* --- Estilos de Controle (Ação e Baralho) --- */
-
+/* --- Controles --- */
 .controls, .deck-controls {
   display: flex;
-  flex-wrap: wrap; /* Para melhor responsividade em telas pequenas */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   margin-top: 15px;
@@ -141,7 +148,7 @@ body {
 }
 
 .btn-correct, .btn-incorrect, .btn-next {
-    flex-grow: 1; /* Faz os botões de controle de estudo ocuparem espaço igual */
+  flex-grow: 1;
 }
 
 /* Botões de Estudo */
@@ -169,11 +176,11 @@ body {
 
 /* Botões de Baralho */
 .btn-deck {
-    background-color: #58a6ff;
-    color: #0d1117;
+  background-color: #58a6ff;
+  color: #0d1117;
 }
 .btn-deck:hover:not(:disabled) {
-    background-color: #79c0ff;
+  background-color: #79c0ff;
 }
 
 .btn:disabled {
@@ -218,47 +225,46 @@ body {
   color: #58a6ff;
 }
 
-
-/* --- Formulário de Criação (Card Creator) --- */
+/* --- Criador de Cards --- */
 .card-creator {
-    background-color: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
-    width: 100%;
-    max-width: 400px;
-    box-sizing: border-box;
-    text-align: left;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  text-align: left;
 }
 
 .card-creator h3 {
-    color: #79c0ff;
-    margin-top: 0;
-    margin-bottom: 15px;
-    text-align: center;
+  color: #79c0ff;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .card-creator input[type="text"], 
 .card-creator textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #30363d;
-    border-radius: 4px;
-    background-color: #0d1117;
-    color: #e6edf3;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    resize: vertical;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  background-color: #0d1117;
+  color: #e6edf3;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  resize: vertical;
 }
 
 .card-creator textarea {
-    min-height: 50px;
+  min-height: 50px;
 }
 
 #addCardBtn, #closeCreatorBtn {
-    width: 48%; /* Para ficarem lado a lado */
-    display: inline-block;
-    margin-top: 10px;
+  width: 48%;
+  display: inline-block;
+  margin-top: 10px;
 }
