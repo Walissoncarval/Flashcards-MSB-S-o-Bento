@@ -18,7 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 90%; 
+  width: 100%; 
   max-width: 500px;
   padding: 20px 0;
 }
@@ -268,3 +268,4 @@ body {
   display: inline-block;
   margin-top: 10px;
 }
+
