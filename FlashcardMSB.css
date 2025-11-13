@@ -4,8 +4,8 @@ body {
   background-color: #0d1117;
   color: #e6edf3;
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 100%;
+  padding: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,7 +87,7 @@ body {
 
 /* --- Estilos de conteúdo --- */
 .materia {
-  font-size: 1.1rem;
+  font-size: 1.1 rem;
   font-weight: bold;
   color: #79c0ff;
   margin-bottom: 5px;
@@ -99,7 +99,7 @@ body {
 }
 
 .afirmacao {
-  font-size: 1.2rem;
+  font-size: 1.2 rem;
   margin-top: 10px;
 }
 
@@ -110,20 +110,20 @@ body {
 }
 
 .resposta {
-  font-size: 1.8rem;
+  font-size: 1.8 rem;
   color: #4eaed9;
   text-align: center;
   margin-bottom: 10px;
 }
 
 .justificativa {
-  font-size: 0.9rem;
+  font-size: 0.9 rem;
   color: #c9d1d9;
   margin-bottom: 10px;
 }
 
 .esquema {
-  font-size: 0.9rem;
+  font-size: 0.9 rem;
   color: #d2a8ff;
   margin-bottom: 10px;
 }
@@ -144,7 +144,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 0.9 rem;
 }
 
 .btn-correct, .btn-incorrect, .btn-next {
@@ -195,7 +195,7 @@ body {
   align-items: center;
   gap: 8px;
   margin-bottom: 20px;
-  font-size: 1rem;
+  font-size: 1 rem;
   color: #8b949e;
 }
 
@@ -268,4 +268,5 @@ body {
   display: inline-block;
   margin-top: 10px;
 }
+
 
