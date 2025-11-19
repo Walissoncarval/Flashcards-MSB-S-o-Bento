@@ -19,7 +19,7 @@ body {
   justify-content: center;
   text-align: center;
   width: 100%; 
-  max-width: 500px;
+  max-width: 736px;
   padding: 20px 0;
 }
 
@@ -38,7 +38,7 @@ body {
 /* 🔧 Ajuste de tamanho e centralização */
 .flashcard {
   width: 100%;
-  max-width: 400px; 
+  max-width: 736px; 
   min-height: 280px; /* altura mínima maior para legibilidade */
   perspective: 1000px;
   cursor: pointer;
@@ -229,8 +229,8 @@ body {
 .card-creator {
   background-color: #161b22;
   border: 1px solid #30363d;
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: 24px;
+  padding: 12px;
   margin-top: 20px;
   width: 100%;
   max-width: 400px;
@@ -248,10 +248,10 @@ body {
 .card-creator input[type="text"], 
 .card-creator textarea {
   width: 100%;
-  padding: 10px;
+  padding: 24px;
   margin-bottom: 10px;
   border: 1px solid #30363d;
-  border-radius: 4px;
+  border-radius: 12px;
   background-color: #0d1117;
   color: #e6edf3;
   box-sizing: border-box;
@@ -266,7 +266,8 @@ body {
 #addCardBtn, #closeCreatorBtn {
   width: 48%;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 24px;
 }
+
 
 
